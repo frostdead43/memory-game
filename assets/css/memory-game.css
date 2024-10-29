@@ -234,17 +234,3 @@ border-radius: 26px;
 }
 }
 
-
-@media (min-width: 375px) and (max-width: 768px) {
- #menu {
-  display: block;
-  margin-right: -134px;
- }
-
- .pc {
-  display:none;
- }
-
- 
-
-}
