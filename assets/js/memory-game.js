@@ -107,3 +107,24 @@ function resetOpenCards() {
      totalSeconds = 0;
 }
 restartBtn.addEventListener('click',resetOpenCards);
+
+
+function checkFor() {
+  const match = firtstMove.innerText === secondMove.innerText;
+  if (match) {
+    firtstMove.classList.add('game-match');
+    secondMove.classList.add('game-match');
+  
+    if (document.querySelectorAll('.game-match').length === data.length) {
+      clearInterval(intervalId); 
+    }
+
+    reset();
+  } else {
+    setTimeout(() => {
+      firtstMove.classList.remove('game-item-active');
+      secondMove.classList.remove('game-item-active');
+      reset();
+    }, 1000);
+  }
+}
